@@ -3,6 +3,13 @@ const client = new Discord.Client();
 var prefix = "d";
 var adminprefix = 'd'
 
+
+client.on('ready', () => {
+console.log(`Logged in as ${client.user.tag}!`);
+});
+
+
+
 const developers = ["457814721957986324","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
@@ -38,4 +45,4 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 });
 
 
-client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
+client.login(process.env.BOT_TOKEN);
