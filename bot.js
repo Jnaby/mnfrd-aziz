@@ -3,12 +3,6 @@ const client = new Discord.Client();
 var prefix = "D";
 var adminprefix = 'D'
 
-
- 
-  client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag} !`);
- 
-
 const developers = ["457814721957986324","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
@@ -21,7 +15,7 @@ client.on('message', message => {
      if (message.content === (adminprefix + "leave")) {
     message.guild.leave();        
   } else  
-  if (message.content.startsWith(adminprefix + 'et')) {
+  if (message.content.startsWith(adminprefix + 'wt')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.send(`**✅   ${argresult}**`)
   } else 
@@ -44,4 +38,4 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 });
 
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
